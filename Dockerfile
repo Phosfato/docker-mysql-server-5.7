@@ -6,8 +6,7 @@ RUN apt-get update -yq && \
     apt-get install -yq mysql-server-5.7 && \
     # remove files left by `apt-get update`
     rm -rf /var/lib/apt/lists/* && \
-    mkdir /var/run/mysqld && \
-    chown mysql:mysql /var/run/mysqld
+    mkdir /var/run/mysqld
 
 COPY mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 
